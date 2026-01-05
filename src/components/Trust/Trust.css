@@ -1,0 +1,16 @@
+.trust {
+  display: flex;
+  justify-content: space-around;
+  background: #111;
+  border-radius: 20px;
+  padding: 50px;
+}
+
+.trust h2 {
+  color: #a855f7;
+  font-size: 2.5rem;
+}
+
+.trust p {
+  opacity: 0.7;
+}
