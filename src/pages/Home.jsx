@@ -1,6 +1,6 @@
 import Hero from "../components/Hero/Hero";
 import ServicesOverview from "../components/ServicesOverview/ServicesOverview";
-import WhyChooseUs from "../components/WhyChooseUs/WhyChooseUs";
+import WhyChooseUs from "../components/WhyChooseus/WhyChooseUs.jsx";
 import HowWeWork from "../components/How-we-work/HowWeWork";
 import StudyAbroad from "../components/Study-Abroad/StudyAbroad";
 import ProjectsInternships from "../components/Projects-Internships/ProjectsInternships";
