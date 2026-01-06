@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { servicesData } from "../../data/servicesData.jsx";
-import "./servicesPage.css";
+import "../Services/ServicesPage.css";
 
 function ServicesPage() {
     const location = useLocation();
