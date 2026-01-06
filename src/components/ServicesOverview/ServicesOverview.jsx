@@ -1,4 +1,4 @@
-import { servicesData } from "../../data/servicesData";
+import { servicesData } from "../../data/servicesData.js";
 import { Link } from "react-router-dom";
 import "./ServicesOverview.css";
 

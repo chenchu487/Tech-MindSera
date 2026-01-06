@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { servicesData } from "../../data/servicesData";
+import { servicesData } from "../../data/servicesData.js";
 import "./servicesPage.css";
 
 function ServicesPage() {
