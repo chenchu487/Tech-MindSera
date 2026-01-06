@@ -1,7 +1,19 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { servicesData } from "../../data/servicesData";
 import "./servicesPage.css";
 
 function ServicesPage() {
+    const location = useLocation();
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.getElementById(location.hash.slice(1));
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, [location]);
+
   return (
     <section className="services-page">
       <div className="services-hero">
@@ -14,26 +26,30 @@ function ServicesPage() {
 
       <div className="services-list">
         {servicesData.map((service, index) => (
-          <div
-            key={service.id}
-            id={service.id}
-            className={`service-row ${index % 2 === 0 ? "left" : "right"}`}
-          >
-            <div className="service-icon">{service.icon}</div>
+         <div
+  key={service.id}
+  id={service.id}
+  className={`service-block ${index % 2 === 0 ? "left" : "right"}`}
+>
+  <div className="service-badge">
+    
+    <div className="badge-icon">{service.icon}</div>
+  </div>
 
-            <div className="service-content">
-              <h2>{service.title}</h2>
-              <p className="service-desc">{service.full}</p>
+  <div className="service-card">
+    <h2>{service.title}</h2>
+    <p className="service-desc">{service.full}</p>
 
-              <ul>
-                {service.points.map((point, i) => (
-                  <li key={i}>✔ {point}</li>
-                ))}
-              </ul>
+    <ul>
+      {service.points.map((point, i) => (
+        <li key={i}>✔ {point}</li>
+      ))}
+    </ul>
 
-              <button className="service-btn">Contact Us</button>
-            </div>
-          </div>
+    <button className="service-btn">Contact Us</button>
+  </div>
+</div>
+
         ))}
       </div>
     </section>

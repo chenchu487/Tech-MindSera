@@ -1,0 +1,197 @@
+/* ================= ABOUT PAGE ================= */
+
+.about-page {
+  position: relative;
+  padding: 140px 20px 120px;
+  overflow: hidden;
+}
+
+
+/* ================= WRAPPER ================= */
+
+.about-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= LEFT ================= */
+
+.about-label {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(99,102,241,0.18);
+  color: #6366f1;
+  margin-bottom: 18px;
+}
+
+.about-left h1 {
+  font-size: clamp(34px, 4.8vw, 48px);
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.about-left p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--muted-text);
+  margin-bottom: 18px;
+}
+
+/* ================= HIGHLIGHTS ================= */
+
+.about-highlights {
+  margin: 26px 0 36px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.about-highlights li {
+  font-size: 14px;
+  /* color: var(--muted-text); */
+}
+
+/* ================= ACTIONS ================= */
+
+.about-actions {
+  display: flex;
+  gap: 18px;
+}
+
+/* Buttons */
+.btn-primary {
+  padding: 14px 34px;
+  border-radius: 999px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(99,102,241,0.45);
+}
+
+.btn-outline {
+  padding: 14px 34px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 1px solid rgba(99,102,241,0.6);
+  /* color: var(--text-color); */
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background: rgba(99,102,241,0.12);
+}
+
+/* ================= RIGHT CARDS ================= */
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-card {
+  padding: 28px 30px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 50px rgba(0,0,0,0.35);
+}
+
+/* .about-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+} */
+
+/* .about-card p {
+  font-size: 14px;
+  color: var(--muted-text);
+} */
+
+/* Light mode cards */
+body:not(.dark) .about-card {
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 20px 40px rgba(99,102,241,0.18);
+}
+
+/* ================= DIVIDER ================= */
+
+.about-divider {
+  width: 100%;
+  height: 1px;
+  margin: 90px 0 70px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(99,102,241,0.5),
+    transparent
+  );
+}
+
+/* ================= STATS ================= */
+
+.about-stats {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(16px);
+  position: relative;
+  z-index: 2;
+}
+
+.about-stats div {
+  text-align: center;
+}
+
+.about-stats strong {
+  font-size: 28px;
+  display: block;
+}
+
+.about-stats span {
+  font-size: 13px;
+  color: var(--muted-text);
+}
+
+/* Light mode stats */
+body:not(.dark) .about-stats {
+  background: rgba(255,255,255,0.95);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .about-actions {
+    flex-direction: column;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,121 @@
+/* ================= CONTACT PAGE ================= */
+
+.contact-page {
+  position: relative;
+  padding: 140px 20px 120px;
+  overflow: hidden;
+}
+
+
+
+/* ================= CONTAINER ================= */
+
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= LEFT INFO ================= */
+
+.contact-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(99,102,241,0.18);
+  color: #6366f1;
+  margin-bottom: 18px;
+}
+
+
+
+/* ================= DETAILS ================= */
+
+.contact-details {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-details div strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.contact-details div span {
+  font-size: 14px;
+  color: var(--muted-text);
+}
+
+/* ================= FORM ================= */
+
+.contact-form {
+  padding: 36px;
+  border-radius: 28px;
+}
+
+.contact-form h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: var(--text-color);
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted-text);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(99,102,241,0.6);
+}
+
+/* ================= BUTTON ================= */
+
+.btn-primary.full {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* ================= LIGHT MODE ================= */
+
+body:not(.dark) .contact-form {
+  background: rgba(255,255,255,0.95);
+}
+
+body:not(.dark) .form-group input,
+body:not(.dark) .form-group textarea {
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(99,102,241,0.25);
+  color: #0f172a;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}

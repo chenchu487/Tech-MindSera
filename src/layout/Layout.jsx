@@ -5,6 +5,7 @@ function Layout({ children }) {
     <>
       <Header />
       {children}
+      <footer />
     </>
   );
 }

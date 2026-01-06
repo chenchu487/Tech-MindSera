@@ -1,5 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Hero.css";
+import Logo from "../../assets/Asset.svg";
+
 
 function Hero() {
   return (
@@ -16,13 +19,27 @@ function Hero() {
       <div className="hero-content">
         <h1 className="hero-title">Build the future with</h1>
 
-        <h2 className="hero-gradient">
-          TECH MINDSERA <br /> PRIVATE LIMITED
-        </h2>
+        <div className="hero-brand">
+          <img
+            src={Logo}
+            alt="Tech MindSera Logo"
+            className="hero-logo"
+          />
 
-        <p className="hero-sub">
-          IT Services • Global Education • Innovation
-        </p>
+          {/* <h2 className="hero-gradient">
+            TECH <br />
+            MINDSERA <br />
+
+          </h2> */}
+        </div>
+
+
+        <div className="hero-sub">
+          <span className="service-pill"> 💻 IT Services</span>
+          <span className="service-pill"> 🎓 Global Education</span>
+          <span className="service-pill"> 🚀 Innovation</span>
+        </div>
+
 
         <p className="hero-desc">
           We design scalable digital solutions, real-time industry projects,
@@ -31,8 +48,13 @@ function Hero() {
 
         {/* Buttons */}
         <div className="hero-actions">
-          <button className="btn-primary">Explore Services</button>
-          <button className="btn-ghost">Study Abroad</button>
+          <Link to="/services" className="btn-primary">
+            Explore Services
+          </Link>
+
+          <Link to="/services#study-abroad" className="btn-ghost">
+            Study Abroad
+          </Link>
         </div>
 
         {/* Trust row */}

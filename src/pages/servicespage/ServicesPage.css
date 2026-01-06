@@ -1,109 +1,162 @@
+/* ================= PAGE ================= */
 .services-page {
-  background: transparent;
-  color: var(--text-color);
-  padding: 120px 20px 80px;
-  transition: background 0.4s ease, color 0.4s ease;
+  padding: 140px 20px 120px;
 }
 
 /* HERO */
 .services-hero {
   text-align: center;
-  margin-bottom: 80px;
+  max-width: 780px;
+  margin: 0 auto 140px;
 }
 
 .services-hero h1 {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: clamp(38px, 6vw, 56px);
+  font-weight: 800;
 }
 
 .services-hero p {
-  color: var(--muted-text);
-  max-width: 720px;
-  margin: 16px auto 0;
+  margin-top: 18px;
   font-size: 18px;
+  color: var(--muted-text);
 }
 
-/* LIST */
+/* ================= LIST ================= */
 .services-list {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 90px;
+  gap: 140px;
 }
 
-/* ROW */
-.service-row {
+/* ================= BLOCK ================= */
+.service-block {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 50px;
-
+  gap: 80px;
 }
 
-.service-row.right {
+.service-block.right {
   flex-direction: row-reverse;
 }
 
-/* ICON */
-.service-icon {
-  font-size: 60px;
-  background: linear-gradient(135deg, #c084fc, #6366f1);
-  padding: 26px;
-  border-radius: 24px;
-  box-shadow: 0 12px 30px rgba(192, 132, 252, 0.35);
-
+/* vertical guide line */
+.service-block::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -120px;
+  bottom: -120px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(192,132,252,0.35),
+    transparent
+  );
 }
 
-/* CONTENT */
-.service-content h2 {
-  font-size: 32px;
+.service-block.right::before {
+  left: auto;
+  right: 50%;
+}
+
+/* ================= BADGE ================= */
+.service-badge {
+  min-width: 140px;
+  text-align: center;
+}
+
+.service-badge span {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--muted-text);
   margin-bottom: 12px;
 }
 
-.service-desc {
-  color: var(--muted-text);
-  line-height: 1.7;
-  margin-bottom: 18px;
+.badge-icon {
+  font-size: 52px;
+  padding: 26px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #c084fc, #6366f1);
+  box-shadow: 0 18px 45px rgba(192,132,252,0.45);
 }
 
-.service-content ul {
+/* ================= CARD ================= */
+.service-card {
+  max-width: 520px;
+  padding: 48px 42px;
+  border-radius: 32px;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+}
+
+body.dark .service-card {
+  background: rgba(0,0,0,0.55);
+}
+
+/* TEXT */
+.service-card h2 {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.service-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+  color: var(--muted-text);
+}
+
+.service-card ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 22px;
+  margin-bottom: 28px;
 }
 
-.service-content li {
-  margin-bottom: 8px;
-  line-height: 1.6;
-  color: var(--text-color);
-  gap: 8px;
+.service-card li {
+  margin-bottom: 10px;
+  font-size: 15px;
 }
-
-
 
 /* BUTTON */
 .service-btn {
-  background: linear-gradient(90deg, #c084fc, #8b5cf6);
-  border: none;
-  padding: 12px 26px;
+  padding: 14px 34px;
   border-radius: 999px;
-  color: #000;
   font-weight: 600;
+  border: none;
   cursor: pointer;
+
+  background: linear-gradient(90deg, #c084fc, #8b5cf6);
+  color: #000;
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(192, 132, 252, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(192,132,252,0.45);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .service-row,
-  .service-row.right {
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .service-block,
+  .service-block.right {
     flex-direction: column;
     text-align: center;
   }
+
+  .service-block::before {
+    display: none;
+  }
+
+  .service-card {
+    max-width: 100%;
+  }
 }
-  

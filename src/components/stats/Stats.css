@@ -1,0 +1,84 @@
+/* ================= STATS SECTION ================= */
+
+.stats-section {
+  position: relative;
+  padding: 140px 20px;
+  overflow: hidden;
+}
+
+/* ---------- BACKGROUND GLOW ---------- */
+.stats-bg::before,
+.stats-bg::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.25;
+}
+
+
+
+/* ---------- GRID ---------- */
+.stats-container {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 36px;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- CARD ---------- */
+.stat-card {
+  padding: 46px 30px;
+  border-radius: 26px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+body.dark .stat-card {
+  background: rgba(0, 0, 0, 0.55);
+  /* box-shadow: 0 22px 55px rgba(0, 0, 0, 0.6); */
+}
+
+/* Hover */
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 65px rgba(0, 0, 0, 0.22);
+}
+
+/* ---------- TEXT ---------- */
+.stat-card h3 {
+  font-size: clamp(38px, 5vw, 56px);
+  font-weight: 800;
+  background: linear-gradient(90deg, #c084fc, #ec4899, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: var(--muted-text);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 100px 20px;
+  }
+}

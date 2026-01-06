@@ -1,0 +1,136 @@
+/* ================= BLOG PAGE ================= */
+
+.blog-page {
+  position: relative;
+  padding: 140px 20px 120px;
+  overflow: hidden;
+}
+
+
+/* ================= HERO ================= */
+
+.blog-hero {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.blog-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(99,102,241,0.18);
+  color: #6366f1;
+  margin-bottom: 18px;
+}
+
+.blog-hero h1 {
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.blog-hero p {
+  font-size: 17px;
+  color: var(--muted-text);
+  line-height: 1.7;
+}
+
+/* ================= GRID ================= */
+
+.blog-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= CARD ================= */
+
+.blog-card {
+  padding: 32px;
+  border-radius: 26px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.25);
+}
+
+/* ================= CONTENT ================= */
+
+.blog-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(192,132,252,0.18);
+  color: #c084fc;
+  margin-bottom: 14px;
+}
+
+.blog-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.blog-card p {
+  font-size: 15px;
+  color: var(--muted-text);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+/* ================= FOOTER ================= */
+
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-date {
+  font-size: 13px;
+  color: var(--muted-text);
+}
+
+.read-more {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6366f1;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+  transform: translateX(6px);
+}
+
+/* ================= LIGHT MODE ================= */
+
+body:not(.dark) .blog-card {
+  background: rgba(255,255,255,0.95);
+}
+
+body:not(.dark) .blog-card p,
+body:not(.dark) .blog-date {
+  color: #475569;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .blog-hero {
+    margin-bottom: 60px;
+  }
+}

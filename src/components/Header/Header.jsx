@@ -1,6 +1,8 @@
 import "./header.css";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import Logo from "../../assets/Asset.svg";
+
 
 function Header() {
   const [darkMode, setDarkMode] = useState(true);
@@ -17,8 +19,11 @@ function Header() {
       {/* Logo */}
       <div className="header-left">
         <NavLink to="/" className="logo" onClick={closeMenu}>
-          <div className="logo-icon">⚡</div>
-          <div className="logo-text">TECH MINDSERA</div>
+          <img
+            src={Logo}
+            alt="Tech MindSera Logo"
+            className="logo-img"
+          />
         </NavLink>
       </div>
 
@@ -27,7 +32,7 @@ function Header() {
         <NavLink to="/" onClick={closeMenu}>Home</NavLink>
         <NavLink to="/about" onClick={closeMenu}>About</NavLink>
         <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
-        <NavLink to="/careers" onClick={closeMenu}>Careers</NavLink>
+        {/* <NavLink to="/careers" onClick={closeMenu}>Careers</NavLink> */}
         <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
         <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
       </nav>
