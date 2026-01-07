@@ -9,7 +9,8 @@ import ServicesPage from "./pages/Services/ServicesPage";
 import Contact from "./components/Contact/Contact";
 import Blog from "./components/blog/Blog";
 import BlogDetail from "./pages/Blog-Detail/BlogDetail";
-import Footer from "./components/footer/Footer";
+import Footer from "./components/Footer/Footer.jsx";
+
 
 import SignIn from "./components/Sign-In/SignIn";
 import SignUp from "./components/Sign-Up/SignUp";
