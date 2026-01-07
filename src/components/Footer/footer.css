@@ -29,23 +29,37 @@
 }
 
 /* Brand */
+/* ================= FOOTER LOGO IMAGE ================= */
+
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 14px;
 }
 
-.logo-icon {
-  background: linear-gradient(135deg, #8b5cf6, #ec4899);
-  padding: 6px 10px;
-  border-radius: 10px;
+.footer-logo-img {
+  height: 42px;        /* desktop size */
+  width: auto;
+  object-fit: contain;
 }
 
-.logo-text {
-  font-weight: 800;
-  font-size: 16px;
+/* Tablet */
+@media (max-width: 900px) {
+  .footer-logo-img {
+    height: 38px;
+  }
 }
+
+/* Mobile */
+@media (max-width: 600px) {
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-logo-img {
+    height: 34px;
+  }
+}
+
 
 .footer-desc {
   font-size: 14px;
@@ -112,23 +126,13 @@
 }
 
 
-/* ================= FOOTER – LIGHT MODE ================= */
-/* body:not(.dark) footer {
-  background:
-    radial-gradient(circle at top left, rgba(192,132,252,0.12), transparent 45%),
-    radial-gradient(circle at bottom right, rgba(99,102,241,0.12), transparent 45%),
-    #f8fafc;
 
-  color: #0f172a;
-} */
 
 body:not(.dark) .footer-container {
-  /* background: rgba(255, 255, 255, 0.75); */
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
   border-radius: 32px;
-  /* box-shadow: 0 30px 80px rgba(15, 23, 42, 0.12); */
 }
 
 
@@ -152,25 +156,93 @@ body:not(.dark) footer a:hover {
 
 
 
-/* ================= RESPONSIVE ================= */
+/* ================= FOOTER MOBILE & TABLET ================= */
 
+/* Tablet */
 @media (max-width: 900px) {
+  .footer {
+    padding: 80px 20px 30px;
+  }
+
   .footer-container {
     grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .footer-desc {
+    max-width: 100%;
+    font-size: 14px;
   }
 }
 
+/* Mobile */
 @media (max-width: 600px) {
+  .footer {
+    padding: 70px 16px 24px;
+  }
+
   .footer-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 🔥 stack all */
+    gap: 28px;
     text-align: center;
   }
 
+  /* Brand */
   .footer-logo {
     justify-content: center;
   }
 
+  .logo-text {
+    font-size: 15px;
+  }
+
+  .footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 auto;
+  }
+
+  /* Columns */
+  .footer-col h4 {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .footer-col a,
+  .footer-col p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  /* Social icons */
   .socials {
     justify-content: center;
+    margin-top: 12px;
+  }
+
+  .socials a {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  /* Bottom text */
+  .footer-bottom {
+    margin-top: 40px;
+    font-size: 12px;
+    padding-top: 16px;
   }
 }
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .footer-desc {
+    font-size: 13px;
+  }
+
+  .footer-col a,
+  .footer-col p {
+    font-size: 13px;
+  }
+}
+

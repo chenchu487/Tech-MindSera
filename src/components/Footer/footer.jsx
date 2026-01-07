@@ -1,6 +1,7 @@
 import "./Footer.css";
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/Asset.svg";
 
 function Footer() {
   return (
@@ -11,9 +12,13 @@ function Footer() {
         {/* BRAND */}
         <div className="footer-brand">
           <div className="footer-logo">
-            <span className="logo-icon">⚡</span>
-            <span className="logo-text">TECH MINDSERA</span>
-          </div>
+  <img
+    src={Logo}
+    alt="Tech MindSera Logo"
+    className="footer-logo-img"
+  />
+</div>
+
 
           <p className="footer-desc">
             Tech MindSera is an IT services & global education startup delivering

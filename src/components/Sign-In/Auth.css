@@ -1,0 +1,147 @@
+/* ================= AUTH PAGE ================= */
+
+.auth-page {
+  min-height: 100vh;
+  padding: 120px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= AUTH CARD ================= */
+
+.auth-form {
+  width: 100%;
+  max-width: 460px;
+  padding: 46px;
+  border-radius: 28px;
+  text-align: center;
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(22px);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Light Mode */
+body:not(.dark) .auth-form {
+  background: #ffffff;
+  border: 1px solid #ede9fe;
+  box-shadow:
+    0 30px 70px rgba(99,102,241,0.22);
+}
+
+/* ================= HEAD ================= */
+
+.auth-form h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.auth-sub {
+  font-size: 14px;
+  color: var(--muted-text);
+  margin-bottom: 34px;
+}
+
+/* ================= INPUTS ================= */
+
+.auth-form input,
+.auth-form select {
+  width: 100%;
+  padding: 15px 16px;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: inherit;
+}
+
+/* Focus effect */
+.auth-form input:focus,
+.auth-form select:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139,92,246,0.35);
+}
+
+/* Light mode inputs */
+body:not(.dark) .auth-form input,
+body:not(.dark) .auth-form select {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+}
+
+/* Dropdown fix (important) */
+.auth-form select {
+  cursor: pointer;
+}
+
+/* ================= EXTRA ROW ================= */
+
+.auth-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin: 4px 0 20px;
+}
+
+.forgot-link {
+  color: #a78bfa;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* ================= BUTTON ================= */
+
+.auth-form button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  font-size: 15px;
+}
+
+/* ================= FOOT LINKS ================= */
+
+.auth-links {
+  margin-top: 26px;
+  font-size: 14px;
+  color: var(--muted-text);
+}
+
+.auth-links a {
+  color: #8b5cf6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+  .auth-form {
+    padding: 34px 24px;
+  }
+
+  .auth-form h1 {
+    font-size: 24px;
+  }
+}
+
+

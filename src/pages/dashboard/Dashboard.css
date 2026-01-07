@@ -1,0 +1,25 @@
+.dashboard {
+  padding: 120px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dash-card {
+  padding: 30px;
+  border-radius: 26px;
+}
+
+.dash-card ul {
+  margin-top: 14px;
+}
+
+.dash-card li {
+  margin-bottom: 10px;
+}

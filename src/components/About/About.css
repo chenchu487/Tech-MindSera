@@ -110,17 +110,6 @@
   box-shadow: 0 24px 50px rgba(0,0,0,0.35);
 }
 
-/* .about-card h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 10px;
-} */
-
-/* .about-card p {
-  font-size: 14px;
-  color: var(--muted-text);
-} */
-
 /* Light mode cards */
 body:not(.dark) .about-card {
   background: rgba(255,255,255,0.92);
@@ -176,22 +165,127 @@ body:not(.dark) .about-stats {
   background: rgba(255,255,255,0.95);
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= ABOUT – MOBILE & TABLET ================= */
 
+/* Tablet */
 @media (max-width: 900px) {
+  .about-page {
+    padding: 110px 18px 90px;
+  }
+
   .about-wrapper {
     grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-left h1 {
+    font-size: 32px;
+  }
+
+  .about-left p {
+    font-size: 15px;
   }
 
   .about-highlights {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .about-actions {
     flex-direction: column;
+    gap: 14px;
+  }
+
+  .about-actions a {
+    text-align: center;
+  }
+
+  .about-card {
+    padding: 24px;
+  }
+
+  .about-divider {
+    margin: 70px 0 50px;
   }
 
   .about-stats {
     grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
   }
 }
+
+/* Mobile */
+@media (max-width: 600px) {
+  .about-page {
+    padding: 90px 14px 80px;
+  }
+
+  .about-label {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .about-left h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .about-left p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .about-highlights li {
+    font-size: 13px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .about-right {
+    gap: 18px;
+  }
+
+  .about-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .about-divider {
+    margin: 60px 0 40px;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .about-stats strong {
+    font-size: 22px;
+  }
+
+  .about-stats span {
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .about-left h1 {
+    font-size: 23px;
+  }
+
+  .about-left p {
+    font-size: 13px;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+}
+

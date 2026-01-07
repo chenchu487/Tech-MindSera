@@ -43,8 +43,7 @@ function Header() {
           {darkMode ? "☀" : "🌙"}
         </span>
 
-        <span className="lang">EN</span>
-        <button className="signin">Sign In</button>
+        <NavLink to="/sign-in" className="signin">Sign In</NavLink>
 
         {/* Hamburger */}
         <div

@@ -1,0 +1,89 @@
+/* ================= SIGN UP PAGE ================= */
+
+.signup-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 16px;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 42px;
+  border-radius: 26px;
+  text-align: center;
+}
+
+/* ================= HEAD ================= */
+
+.signup-card h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.signup-sub {
+  font-size: 14px;
+  color: var(--muted-text);
+  margin-bottom: 32px;
+}
+
+/* ================= FORM ================= */
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: block;
+  color: var(--muted-text);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: inherit;
+}
+
+body:not(.dark) .form-group input {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+}
+
+/* ================= FOOT ================= */
+
+.signin-text {
+  margin-top: 26px;
+  font-size: 14px;
+  color: var(--muted-text);
+}
+
+.signin-text a {
+  color: #8b5cf6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 32px 24px;
+  }
+
+  .signup-card h1 {
+    font-size: 24px;
+  }
+}

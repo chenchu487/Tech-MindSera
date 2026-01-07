@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { servicesData } from "../../data/servicesData.jsx";
 import "../Services/ServicesPage.css";
+import { Link } from "react-router-dom";
 
 function ServicesPage() {
     const location = useLocation();
@@ -46,7 +47,7 @@ function ServicesPage() {
       ))}
     </ul>
 
-    <button className="service-btn">Contact Us</button>
+    <Link to="/Contact" className="service-btn">Contact Us</Link>
   </div>
 </div>
 

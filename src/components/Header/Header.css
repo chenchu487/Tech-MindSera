@@ -80,9 +80,24 @@ body:not(.dark) .header {
 .header-center a {
   color: var(--text-light);
   text-decoration: none;
-  font-size: 14px;
+
+  font-size: 15px;          /* 🔼 konchem increase */
+  font-weight: 600;         /* 🔥 BOLD */
+  letter-spacing: 0.4px;    /* premium feel */
+
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* Hover smooth lift */
+.header-center a:hover {
+  transform: translateY(-1px);
+}
+
+/* Active link stronger */
+.header-center a.active {
+  font-weight: 700;
 }
 
 
@@ -126,13 +141,45 @@ body:not(.dark) .header-center a {
   cursor: pointer;
 }
 
+/* ================= SIGN IN ================= */
 .signin {
-  background: transparent;
-  border: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+
   font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, #c084fc, #8b5cf6);
+  color: #ffffff;
+
   cursor: pointer;
-  color: inherit;
+  transition: all 0.35s ease;
 }
+
+/* Hover effect */
+.signin:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(139, 92, 246, 0.45);
+}
+
+
+@media (max-width: 768px) {
+  
+
+  .signin {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+}
+
+
+/* Light mode (slightly softer) */
+body:not(.dark) .signin {
+  box-shadow: 0 6px 18px rgba(139, 92, 246, 0.25);
+}
+
 
 /* ================= HAMBURGER ================= */
 .hamburger {
@@ -145,7 +192,7 @@ body:not(.dark) .header-center a {
 }
 
 .hamburger span {
-  height: 2px;
+  height: 3px;
   background: currentColor;
   border-radius: 2px;
   transition: all 0.35s ease;
@@ -165,10 +212,34 @@ body:not(.dark) .header-center a {
 }
 
 /* ================= MOBILE MENU ================= */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 14px 20px;   /* 👈 mobile spacing fix */
+  }
+}
+
+@media (max-width: 768px) {
+  .header-center {
+    top: 68px;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .header-center a {
+    font-size: 16px;     /* 🔼 readable */
+    font-weight: 600;
+    padding: 12px 0;     /* 👈 touch area */
+  }
+}
+
+
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
+
+
 
   .header-center {
     position: absolute;
