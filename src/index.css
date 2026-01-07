@@ -76,28 +76,6 @@ body:not(.dark) {
 }
 
 
-/* ================= DARK MODE GLOBAL WATERMARK ================= */
-
-/* body.dark::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-
-  background:
-    linear-gradient(
-      rgba(5,5,7,0.8),
-      rgba(5,5,7,0.8)
-    ),
-    url("/src/assets/tech mindsera_pages-to-How-we-work.jpg")
-      no-repeat
-      right center / 1700px;
-
-  opacity: 0.35;
-} */
-
-
 
 
 
@@ -219,6 +197,33 @@ section {
   background: transparent;
   position: relative;
   z-index: 1;
+
+    padding-block: 80px;   /* top + bottom */
+
+}
+
+.hero + section,
+.services + section,
+.study-abroad + section,
+.why-section + section,
+.how-work + section {
+  padding-top: 60px;  /* 🔥 gap reduce */
+}
+
+
+@media (max-width: 768px) {
+  section {
+    padding-block: 48px;   /* 🔥 mobile tight spacing */
+  }
+
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .hero + section {
+    padding-top: 40px;
+  }
 }
 
 

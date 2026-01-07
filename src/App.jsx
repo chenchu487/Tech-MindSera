@@ -2,18 +2,18 @@ import { Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-import Layout from "./layout/Layout.jsx";
-import Home from "./pages/Home.jsx";
-import About from "./components/About/About.jsx";
-import ServicesPage from "./pages/Services/ServicesPage.jsx";
-import Contact from "./components/Contact/Contact.jsx";
-import Blog from "./components/blog/Blog.jsx";
-import BlogDetail from "./pages/Blog-Detail/BlogDetail.jsx";
-import Footer from "./components/footer/Footer.jsx";
+import Layout from "./layout/Layout";
+import Home from "./pages/Home";
+import About from "./components/About/About";
+import ServicesPage from "./pages/Services/ServicesPage";
+import Contact from "./components/Contact/Contact";
+import Blog from "./components/blog/Blog";
+import BlogDetail from "./pages/Blog-Detail/BlogDetail";
+import Footer from "./components/footer/Footer";
 
-import SignIn from "./components/Sign-In/SignIn.jsx";
-import SignUp from "./components/Sign-Up/SignUp.jsx";
-import Dashboard from "./pages/Dashboard/Dashboard.jsx";
+import SignIn from "./components/Sign-In/SignIn";
+import SignUp from "./components/Sign-Up/SignUp";
+import Dashboard from "./pages/dashboard/Dashboard";
 
 function App() {
   return (
