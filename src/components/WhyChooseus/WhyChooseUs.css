@@ -1,0 +1,202 @@
+/* ================= WHY SECTION ================= */
+.why-section {
+  padding: 140px 20px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(99,102,241,0.08),
+    transparent
+  );
+}
+
+
+/* ================= DARK MODE GLOBAL WATERMARK ================= */
+
+body.dark .why-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+    /* linear-gradient(
+      rgba(102, 102, 105, 0.8),
+      rgba(69, 69, 70, 0.8)
+    ), */
+    url("../src/assets/tech mindsera_Hero_BG.jp")
+      no-repeat
+      right center / 1700px;
+
+  opacity: 0.14;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+}
+
+/* ================= LEFT ================= */
+.why-left h2 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.why-left p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted-text);
+  margin-bottom: 40px;
+}
+
+/* 🔥 HIGHLIGHTS SIDE BY SIDE */
+.why-left {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.why-left h2,
+.why-left p {
+  grid-column: 1 / -1; /* heading & para full width */
+}
+
+.why-highlight {
+  text-align: center;
+  padding: 20px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.why-highlight strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.why-highlight span {
+  font-size: 14px;
+  color: var(--muted-text);
+}
+
+/* ================= RIGHT TIMELINE ================= */
+.why-right {
+  position: relative;
+  padding-left: 40px;
+}
+
+.why-right::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(#c084fc, #6366f1);
+}
+
+.why-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.why-item h4 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.why-item p {
+  font-size: 15px;
+  color: var(--muted-text);
+  line-height: 1.6;
+}
+
+/* DOT */
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c084fc, #6366f1);
+  box-shadow: 0 0 20px rgba(192,132,252,0.7);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+/* ================= DARK MODE ================= */
+body.dark .why-section {
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(99,102,241,0.12),
+    transparent
+  );
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet & Mobile */
+@media (max-width: 900px) {
+  .why-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .why-left {
+    grid-template-columns: repeat(2, 1fr); /* still side-by-side */
+  }
+
+  .why-left h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .why-left p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .why-right {
+    padding-left: 24px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .why-section {
+    padding: 80px 14px;
+  }
+
+  .why-left {
+    grid-template-columns: repeat(2, 1fr); /* 🔥 still side-by-side */
+    gap: 16px;
+  }
+
+  .why-left h2 {
+    font-size: 26px;
+  }
+
+  .why-left p {
+    font-size: 15px;
+  }
+
+  .why-highlight strong {
+    font-size: 16px;
+  }
+
+  .why-highlight span {
+    font-size: 13px;
+  }
+}
+
+/* Very Small Phones safety */
+@media (max-width: 360px) {
+  .why-left {
+    grid-template-columns: 1fr; /* fallback */
+  }
+}
