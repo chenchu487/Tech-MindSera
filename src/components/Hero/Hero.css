@@ -146,16 +146,89 @@ body:not(.dark) .hero-features span {
   font-size: 22px;
 }
 
-/* MOBILE */
+/* ================= MOBILE HERO FIX ================= */
 @media (max-width: 768px) {
-  .hero-logo { width: 320px; }
+  .hero {
+    padding-top: 90px;   /* reduce header gap */
+    padding-bottom: 40px;
+  }
 
+  .hero-content {
+    padding: 0 16px;
+  }
+
+  /* TITLE */
+  .hero-title {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+
+  /* LOGO */
+  .hero-logo {
+    width: 260px;
+    margin-bottom: 10px;
+    animation: none; /* mobile lo float avasaram ledu */
+  }
+
+  /* SERVICES LINE */
+  .hero-sub {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+
+  /* DESCRIPTION */
+  .hero-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  /* FEATURE PILLS */
+  .hero-features {
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+
+  .hero-features span {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  /* BUTTONS */
   .hero-actions {
     flex-direction: column;
+    gap: 14px;
+    margin-bottom: 26px;
   }
 
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* TRUST */
   .hero-trust {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 26px;
+  }
+
+  /* STATS */
+  .hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .hero-stats strong {
+    font-size: 18px;
+  }
+
+  .hero-stats span {
+    font-size: 12px;
   }
 }
+

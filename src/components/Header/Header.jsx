@@ -1,7 +1,9 @@
 import "../Header/Header.css";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/Asset.svg";
+import LogoLight from "../../assets/Asset.svg";
+import LogoDark from "../../assets/colored-logo.png";
+
 
 
 function Header() {
@@ -20,7 +22,7 @@ function Header() {
       <div className="header-left">
         <NavLink to="/" className="logo" onClick={closeMenu}>
           <img
-            src={Logo}
+             src={darkMode ? LogoDark : LogoLight}
             alt="Tech MindSera Logo"
             className="logo-img"
           />

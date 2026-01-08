@@ -1,5 +1,4 @@
 import Hero from "../components/Hero/Hero";
-import ServicesOverview from "../components/ServicesOverview/ServicesOverview";
 import WhyChooseUs from "../components/WhyChooseus/WhyChooseUs";
 import HowWeWork from "../components/How-we-work/HowWeWork";
 import StudyAbroad from "../components/Study-Abroad/StudyAbroad";
@@ -9,12 +8,11 @@ import Testimonials from "../components/testimonials/Testimonials";
 import FinalCTA from "../components/Final-CTA/FinalCTA";
 
 
-function App() {
+function Home() {
 
   return (
     <>
       <Hero />
-      <ServicesOverview />
       <StudyAbroad />
       <WhyChooseUs />
       <HowWeWork />
@@ -27,4 +25,4 @@ function App() {
   )
 }
 
-export default App
+export default Home
