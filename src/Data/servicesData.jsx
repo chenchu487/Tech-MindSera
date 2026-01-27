@@ -1,6 +1,4 @@
-
-
-export const ServicesData = [
+ const ServicesData = [
   {
     id: "it-services",
     icon: "💻",
@@ -79,6 +77,11 @@ export const ServicesData = [
       "Growth Support"
     ]
   }
+
+
+
 ];
 
 
+
+export default ServicesData;
