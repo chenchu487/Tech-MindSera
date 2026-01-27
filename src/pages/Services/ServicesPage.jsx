@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { servicesData } from "../../data/ServicesData.jsx";
+import { servicesData } from "../../data/ServicesData";
 import "../Services/ServicesPage.css";
 import { Link } from "react-router-dom";
 
