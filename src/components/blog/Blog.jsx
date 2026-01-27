@@ -1,6 +1,6 @@
 import "./Blog.css";
 import { Link } from "react-router-dom";
-import blogData from "../../data/blogData";
+import blogData from "../../data/blogData.mjs";
 
 function Blog() {
   return (
