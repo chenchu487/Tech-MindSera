@@ -59,7 +59,7 @@ function Footer() {
           <h4>Contact</h4>
           <p>📍 India</p>
           <p>📧 info@techmindsera.com</p>
-          <p>📞 +91 XXXXX XXXXX</p>
+          <p>📞 +91 98855 46060</p>
 
           <div className="socials">
             <a href="#">🌐</a>

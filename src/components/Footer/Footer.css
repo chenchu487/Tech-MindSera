@@ -5,15 +5,21 @@
   background: transparent;
   padding: 100px 20px 40px;
   overflow: hidden;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px rgba(145, 151, 235, 0.35);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.08); */
+
+  transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
 
 .footer-glow {
   position: absolute;
   inset: 0;
-  background:
+  /* background:
     radial-gradient(circle at bottom left, rgba(192,132,252,0.18), transparent 45%),
-    radial-gradient(circle at top right, rgba(99,102,241,0.18), transparent 45%);
+    radial-gradient(circle at top right, rgba(99,102,241,0.18), transparent 45%); */
   pointer-events: none;
 }
 
@@ -23,7 +29,7 @@
   margin: auto;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-  gap: 40px;
+  gap: 30px;
   position: relative;
   z-index: 1;
 }
@@ -66,6 +72,7 @@
   line-height: 1.7;
   color: var(--muted-text);
   max-width: 360px;
+  margin-top: 20px;
 }
 
 /* Columns */

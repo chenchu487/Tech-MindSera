@@ -34,7 +34,7 @@ function Contact() {
             </div>
             <div>
               <strong>📞 Phone</strong>
-              <span>+91 XXXXX XXXXX</span>
+              <span>+91 98855 46060</span>
             </div>
           </div>
         </div>
