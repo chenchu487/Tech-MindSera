@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import blogData from "../../data/blogData";
+import blogData from "../../../src/data/blogData";  
 import "./BlogDetail.css";
 
 function BlogDetail() {
