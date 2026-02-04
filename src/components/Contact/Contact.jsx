@@ -26,7 +26,7 @@ function Contact() {
           <div className="contact-details">
             <div>
               <strong>📍 Location</strong>
-              <span>India</span>
+              <span>503, Capital Park, Cyber Hills Colony, VIP Hills, Silicon Valley, Madhapur, Hyderabad, Telangana 500081</span>
             </div>
             <div>
               <strong>📧 Email</strong>

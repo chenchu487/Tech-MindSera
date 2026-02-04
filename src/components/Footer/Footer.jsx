@@ -57,7 +57,7 @@ function Footer() {
         {/* CONTACT */}
         <div className="footer-col">
           <h4>Contact</h4>
-          <p>📍 India</p>
+          <p>📍 503, Capital Park, Cyber Hills Colony, VIP Hills, Silicon Valley, Madhapur, Hyderabad, Telangana 500081</p>
           <p>📧 info@techmindsera.com</p>
           <p>📞 +91 98855 46060</p>
 
