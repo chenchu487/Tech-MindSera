@@ -206,7 +206,10 @@ section {
 .services + section,
 .study-abroad + section,
 .why-section + section,
-.how-work + section {
+.how-work + section,
+.projects + section,
+.stats-section + section,
+.testimonials + section {
   padding-top: 60px;  /* 🔥 gap reduce */
 }
 
